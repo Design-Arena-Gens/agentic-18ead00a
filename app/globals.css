@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 font-body antialiased;
+}
+
+a {
+  @apply text-primary-500 underline underline-offset-2 hover:text-primary-600;
+}
+
+.gradient-ring {
+  position: relative;
+}
+
+.gradient-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background: linear-gradient(120deg, rgba(41, 115, 255, 0.6), rgba(72, 180, 255, 0.2));
+  border-radius: inherit;
+  filter: blur(12px);
+  opacity: 0.5;
+}
